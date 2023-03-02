@@ -4,3 +4,8 @@
 #+begin_src sh
 xrandr --output DP-0.2 --off; read -n1; xrandr --output DP-0.2 --auto
 #+end_src
+
+** NMAP Network scan
+#+begin_src sh
+nmap -sn 192.168.0.0/24
+#+end_src
