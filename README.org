@@ -1,0 +1,6 @@
+* Random Snippets
+
+** Disable and re-enable monitor outputs. 
+#+begin_src sh
+xrandr --output DP-0.2 --off; read -n1; xrandr --output DP-0.2 --auto
+#+end_src
