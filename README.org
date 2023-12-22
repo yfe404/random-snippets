@@ -28,3 +28,11 @@ Monitor progress with =watch= in another tab
 #+begin_src sh
 watch cat /tmp/timer
 #+end_src
+
+
+** Compile and upload binary for ESP8266 Node MCU (lol1n) board
+
+#+begin_src sh
+  arduino-cli compile --fqbn esp8266:esp8266:generic --output-dir  /tmp  thing.ino -v
+  esptool.py --port /dev/ttyUSB0 write_flash -fm dio -fs detect 0x00000 /tmp/thing.ino.bin
+#+end_src
